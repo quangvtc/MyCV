@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+body{
+    display: flex;
+    font-size: 15px;
+    background-color: black;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 10px 0;
+    color: #f1f1f1;
+}
+/* Set the width of the sidebar to 120px */
+.side-bar {
+    position: fixed;
+    width: 120px;
+    height: 100%;
+    background: #222;
+}
+.side-bar img{
+    border-radius: 50%;
+}
+.side-bar-item{
+    text-align: center;
+    padding: 12px 24px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.side-bar-item:hover{
+    background-color: black;
+}
+.side-bar-item.active{
+    background-color: black;
+}
+.side-bar-item i{
+    font-size: 36px;
+}
+.side-bar-item p{
+    margin: 1em;
+}
+#main{
+    background-color: black;
+    padding: 12px 24px;
+    margin: 0 120px 0 240px;
+}
+#home{
+    color: white;
+    text-align: center;
+    padding: 32px 16px;
+}
+.home-heading{
+    font-size: 64px;
+}
+.home-sub-heading{
+    font-weight: 400;
+}
+#home p{
+    margin: 1em 0;
+}
+.home-img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 35%;
+    filter: drop-shadow(92px 53px 171px white);
+}
+#about{
+    padding: 64px 0;
+}
+#about .about-name{
+    font-weight: 400;
+    font-size: 30px;
+    text-align: justify;
+}
+.line{
+    width: 200px;
+    margin: 20px 0;
+}
+.about-content{
+    color: #757575;
+    margin: 1em 0;
+}
+.about-skill{
+    padding: 16px 0;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: justify;
+    margin: 10px 0;
+}
+.about-item-skill{
+    letter-spacing: 4px;
+    color: #757575;
+    margin: 15px 0;
+}
+#photos{
+    padding: 64px 0;
+}
+.row{
+    display: flex;
+    margin:0 -8px;
+}
+.col-2{
+    width: 50%;
+    padding : 0 8px;
+}
+.col-2 img{
+    margin-bottom: 12px;
+}
+#contact{
+    padding: 64px 0;
+}
+.contact-heading{
+    font-weight: 400;
+    font-size: 30px;
+    text-align: justify;
+}
+.contact-section{
+    margin: 16px 0;
+    color: #757575;
+}
+.contact-section p{
+    margin: 15px 0;
+}
+.contact-section p i{
+    color: #fff;
+    font-size: 36px;
+    margin-right: 16px;
+}
+form p{
+    margin: 15px 0;
+}
+form p input{
+    padding: 8px 16px;
+    width: 100%;
+    outline: none;
+}
+.button-submit{
+    padding: 12px 24px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.button-submit:hover{
+    background-color: #ccc;
+}
+#footer{
+    padding: 64px 0;
+    font-size: 25px;
+    color: #757575;
+}
+#footer i:hover{
+    cursor: pointer;
+}
+#footer i a:hover{
+    color: green;
+}
+
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+    #main{
+        margin: 0 !important;
+    }
+    .side-bar {
+        display: none;
+    }
+    #myNavbar{
+        display: flex !important;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+    }
+    .bar-item{
+        display: inline-block;
+        padding: 8px 16px;
+        text-align: center;
+        width: 25%;
+        text-decoration: none;
+        color: #757575;
+        font-weight: bold;
+    }
+    .bar-item.active{
+        background-color: black;
+        color: white;
+    }
+    .bar-item:hover{
+        background-color: #ccc;
+        color: black;
+    }
+    .home-sub-heading{
+        display: none;
+    }
+    .home-heading {
+        font-size: 40px;
+    }
+    
+}
+@media only screen and (max-width: 1084px) {
+    #main {
+        margin: 0 0 0 120px
+    }
+    .home-sub-heading{
+        display: none;
+    }
+}

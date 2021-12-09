@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./Asset/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My CV</title>
+</head>
+
+<body>
+<nav class="side-bar">
+  <!-- Avatar image in top left corner -->
+  <img src="./Asset/imgs/avatar.jpg" alt="avatar" style="width:100%">
+  <a href="#home" class="side-bar-item active" onclick="activeHandle(event)">
+    <i class="fa fa-home"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="side-bar-item" onclick="activeHandle(event)">
+    <i class="fa fa-user"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="side-bar-item" onclick="activeHandle(event)">
+    <i class="fa fa-eye"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="side-bar-item" onclick="activeHandle(event)">
+    <i class="fa fa-envelope"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div id="myNavbar" style="display: none">
+    <a href="#home" class="bar-item active" onclick="activeHandle2(event)">HOME</a>
+    <a href="#about" class="bar-item" onclick="activeHandle2(event)">ABOUT</a>
+    <a href="#photos" class="bar-item" onclick="activeHandle2(event)">PHOTOS</a>
+    <a href="#contact" class="bar-item" onclick="activeHandle2(event)">CONTACT</a>
+</div>
+
+<!-- Page Content -->
+<div id="main">
+  <!-- Header/Home -->
+  <header id="home">
+    <h1 class="home-heading"><span class="home-sub-heading">I'm</span> Quang Nguyen.</h1>
+    <p>Developer and Web Designer.</p>
+    <img src="./Asset/imgs/main-pic.jpg" alt="boy" class="home-img" width="992" height="1108">
+  </header>
+
+  <!-- About Section -->
+  <div id="about">
+    <h2 class="about-name">My Name</h2>
+    <hr class="line">
+    <p class="about-content">Hi, I'm Quang, I'm from HaiPhong city, VietNam country, I'm born in 1994 year,I'm single,
+       I have been graduate at VietNam Maritime univercity in 2017, after 3 years working on a ships.
+       I studied continue IT major in VTCA about web developer.
+    </p>
+    <h3 class="about-skill">My Skills</h3>
+    <p class="about-item-skill">Code</p>
+    <div style="background-color: white;">
+      <div style="background-color: grey; height:28px;width:95%"></div>
+    </div>
+    <p class="about-item-skill">Web Design</p>
+    <div style="background-color: white;">
+      <div style="background-color: grey; height:28px;width:85%"></div>
+    </div>
+    <p class="about-item-skill">Photoshop</p>
+    <div style="background-color: white;">
+      <div style="background-color: grey; height:28px;width:50%"></div>
+    </div><br>
+
+  <!-- Portfolio Section -->
+  <div id="photos">
+    <h2 class="w3-text-light-grey">Photos</h2>
+    <hr class="line">
+
+    <!-- Grid for photos -->
+    <div class="row">
+      <div class="col-2">
+        <img src="./Asset/imgs/wedding.jpg" style="width:100%">
+        <img src="./Asset/imgs/rocks.jpg" style="width:100%">
+        <img src="./Asset/imgs/sailboat.jpg" style="width:100%">
+      </div>
+
+      <div class="col-2">
+        <img src="./Asset/imgs/underwater.jpg" style="width:100%">
+        <img src="./Asset/imgs/chef.jpg" style="width:100%">
+        <img src="./Asset/imgs/wedding.jpg" style="width:100%">
+        <img src="./Asset/imgs/p6.jpg" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <h2 class="contact-heading">Contact Me</h2>
+    <hr class="line">
+
+    <div class="contact-section">
+      <p><i class="fa fa-map-marker"></i> HaiPhong, VietNam</p>
+      <p><i class="fa fa-phone"></i> Phone: +84 7605.4910</p>
+      <p><i class="fa fa-envelope"></i> Email: nguyenquang72494@mail.com</p>
+    </div><br>
+    <p style="color: #757575; margin: 15px 0">Let's get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input type="text" placeholder="Name" required name="Name"></p>
+      <p><input type="text" placeholder="Email" required name="Email"></p>
+      <p><input type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="button-submit" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer id="footer">
+    <i class="fa fa-facebook-official"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-snapchat"></i>
+    <i class="fa fa-pinterest-p"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-linkedin"></i>
+    <p style="font-size: 15px; margin: 15px;">Powered by <a style="color: #757575;" href="https://www.w3schools.com/w3css/default.asp" target="_blank">VTCA</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+</div>
+<script>
+    const activeHandle = (event) => {
+      const items = document.querySelectorAll('.side-bar-item')
+      for(var i = 0; i < items.length; i++) {
+        items[i].className = items[i].className.replace(" active","")
+      }
+      event.currentTarget.className += " active"
+    }
+    const activeHandle2 = (event) => {
+      const items = document.querySelectorAll('.bar-item')
+      for(var i = 0; i < items.length; i++) {
+        items[i].className = items[i].className.replace(" active","")
+      }
+      event.currentTarget.className += " active"
+    }
+</script>
+</body>
+</html>
